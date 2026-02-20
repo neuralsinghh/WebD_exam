@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Bank | Modern Banking</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylee.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i> Nexus<span>Bank</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#" onclick="navigate('home')" class="active">Home</a></li>
+            <li><a href="#" onclick="navigate('dashboard')">Dashboard</a></li>
+            <li><a href="#" onclick="navigate('transfer')">Transfer</a></li>
+            <li><a href="#" onclick="navigate('transactions')">Transactions</a></li>
+            <li><a href="#" onclick="navigate('contact')">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button id="loginBtn" onclick="navigate('login')" class="btn btn-outline">Login</button>
+            <button id="logoutBtn" onclick="logout()" class="btn btn-primary hidden">Logout</button>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE: Home -->
+    <section id="home" class="page active-page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Banking for the <span class="highlight">Future</span></h1>
+      <p>Manage your finances seamlessly with our secure and modern platform.</p>
+      <button onclick="navigate('login')" class="btn btn-primary">
+        Get Started
+      </button>
+    </div>
+  </header>
+
+  <!-- CORE FEATURES -->
+  <div class="features container section-gap">
+    <div class="feature-card">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Secure</h3>
+      <p>Bank-level encryption keeps your data safe.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-bolt"></i>
+      <h3>Fast Transfers</h3>
+      <p>Send money instantly to any account.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-chart-line"></i>
+      <h3>Smart Insights</h3>
+      <p>Track your spending with visual reports.</p>
+    </div>
+  </div>
+
+  <!-- WHY CHOOSE US -->
+  <section class="container section-gap">
+    <h2>Why Choose Nexus Bank?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>24/7 Support</h3>
+        <p>Our team is always available to help you.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Low Fees</h3>
+        <p>Enjoy banking with minimal service charges.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Trusted by Thousands</h3>
+        <p>Serving customers across the country.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEREST RATES -->
+  <section class="container section-gap">
+    <h2>Current Interest Rates</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Savings Account</h3>
+        <p>Up to 6.5% p.a.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fixed Deposit</h3>
+        <p>Up to 7.8% p.a.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Home Loan</h3>
+        <p>Starting at 8.4%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="hero section-gap">
+    <div class="hero-content">
+      <h2>Open Your Account in Minutes</h2>
+      <p>Join thousands of happy customers.</p>
+      <button onclick="navigate('login')" class="btn btn-primary">
+        Open Account
+      </button>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="container section-gap">
+    <h2>Your Security is Our Priority</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>256-bit Encryption</h3>
+        <p>Bank-level data protection.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fraud Monitoring</h3>
+        <p>Real-time suspicious activity alerts.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Secure Login</h3>
+        <p>Multi-layer authentication.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="container section-gap">
+    <h2>What Our Customers Say</h2>
+    <div class="features">
+      <div class="feature-card">
+        <p>"Fast and reliable banking experience."</p>
+        <strong>— Rahul Sharma</strong>
+      </div>
+      <div class="feature-card">
+        <p>"Best mobile banking platform I’ve used."</p>
+        <strong>— Priya Mehta</strong>
+      </div>
+      <div class="feature-card">
+        <p>"Excellent customer support."</p>
+        <strong>— Aman Gupta</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="container section-gap">
+    <h2>Our Achievements</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>1M+</h3>
+        <p>Customers</p>
+      </div>
+      <div class="feature-card">
+        <h3>₹500 Cr+</h3>
+        <p>Transactions Monthly</p>
+      </div>
+      <div class="feature-card">
+        <h3>99.9%</h3>
+        <p>Uptime</p>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+    <!-- PAGE: Login -->
+    <section id="login" class="page">
+        <div class="auth-container">
+            <div class="auth-box">
+                <h2>Welcome Back</h2>
+                <p>Login to access your account</p>
+                <form onsubmit="handleLogin(event)">
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="user@nexus.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="******" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Login</button>
+                </form>
+                <p class="small-text">Use any email/password to test.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE: Dashboard -->
+    <section id="dashboard" class="page">
+        <p id="dateTime"></p>
+        <div class="container">
+            <h2>Welcome, <span id="userName">User</span></h2>
+            <div class="dashboard-grid">
+                <div class="card balance-card">
+                    <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
+                    <div>
+                        <p>Total Balance</p>
+                        <h1><span id="balanceDisplay">₹0.00</span></h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Account Details</h3>
+                    <p><strong>Account #:</strong> <span id="accNum">1234567890</span></p>
+                    <p><strong>Status:</strong> <span class="status-active">Active</span></p>
+                    <p><strong>Type:</strong> Premium Savings</p>
+                </div>
+            </div>
+
+            <h3>Recent Activity</h3>
+            <div class="card table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentTransactions">
+                        <!-- JS populates this -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE: Transfer Money -->
+    <section id="transfer" class="page">
+        <div class="container center-content">
+            <div class="card transfer-card">
+                <h2>Transfer Money</h2>
+                <p>Send funds securely to another account.</p>
+                <form onsubmit="handleTransfer(event)">
+                    <div class="input-group">
+                        <label>Recipient Account Number</label>
+                        <input type="text" id="recipient" placeholder="Ex: 9876543210" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Amount (₹)</label>
+                        <input type="number" id="amount" placeholder="0.00" min="1" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Note (Optional)</label>
+                        <input type="text" id="note" placeholder="Rent, Dinner, etc.">
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Send Money</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- PAGE: Login -->
+<section id="login" class="page">
+    <div class="auth-container">
+        <div class="auth-box">
+            <!-- New Icon -->
+            <div class="auth-icon">
+                <i class="fa-solid fa-fingerprint"></i>
+            </div>
+            
+            <h2>Welcome Back</h2>
+            <p>Please enter your details to sign in</p>
+            
+            <form onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" placeholder="Enter your password" required>
+                        <i class="fa-regular fa-eye"></i>
+                    </div>
+                </div>
+
+                <div class="auth-links">
+                    <a href="#">Remember me</a>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width">Sign In</button>
+            </form>
+
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+
+            <div class="social-login">
+                <button class="social-btn"><i class="fa-brands fa-google"></i></button>
+                <button class="social-btn"><i class="fa-brands fa-apple"></i></button>
+                <button class="social-btn"><i class="fa-brands fa-facebook-f"></i></button>
+            </div>
+
+            <p class="small-text">Secure Login • Encrypted Connection</p>
+        </div>
+    </div>
+</section>
+
+    <!-- PAGE: Transactions -->
+    <section id="transactions" class="page">
+        <div class="container">
+            <h2>Transaction History</h2>
+            <div class="card table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="allTransactions">
+                        <!-- JS populates this -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE: Contact -->
+    <section id="contact" class="page">
+        <div class="container center-content">
+            <div class="card contact-card">
+                <h2>Contact Support</h2>
+                <p>We are here to help 24/7.</p>
+                <form onsubmit="alert('Message sent!'); return false;">
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                    <button class="btn btn-primary full-width">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fa-solid fa-envelope"></i> support@nexusbank.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Nexus Bank — Demo Banking System for Academic Use
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
